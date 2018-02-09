@@ -2,13 +2,31 @@ import React from 'react';
 import {
   View,
   Text,
-  Button,
+  TouchableOpacity,
   AppRegistry
 } from 'react-native';
 
 const Estilos = {
   principal: {
     paddingTop: 40
+  },
+  botao: {
+    backgroundColor: '#50ecb5',
+    padding: 10,
+    borderColor: '#326c5a',
+    borderWidth: 1,
+    borderRadius: 3,
+    shadowColor: '#000',
+    shadowOffset: {
+      width: 0,
+      height: 2
+    },
+    shadowOpacity: 1
+  },
+  textoBotao: {
+    fontSize: 30,
+    color: '#000',
+    alignSelf: 'center'
   }
 };
 
@@ -18,16 +36,15 @@ const onButtonCLick = () => {
 
 const App = () => {
 
-  const { principal } = Estilos;
+  const { principal, botao, textoBotao } = Estilos;
 
   return(
     <View style={ principal }>
-      <Button
-        title= 'Click'
-        color= '#4a691a'
-        onPress= {onButtonCLick}
-        acessibilityLabel= 'Click aqui para visulizar'
-      />
+
+      <TouchableOpacity style={ botao }>
+          <Text style={ textoBotao }>Click</Text>
+      </TouchableOpacity>
+
     </View>
   );
 };
