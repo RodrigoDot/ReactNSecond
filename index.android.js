@@ -8,9 +8,9 @@ import {
 const Estilos = {
   estiloTexto: {
     fontSize: 40,
-    backgroundColor: '#299499',
-    textAlign: 'center',
-    padding: 15,
+    backgroundColor: '#2932a1',
+    //COM CSS PADRAO
+    // fontStyle: 'italic'
     // shadowColor: '#5e7766',
     // shadowOpacity: 1,
     // shadowRadius: 1,
@@ -18,12 +18,23 @@ const Estilos = {
     //   width: 0,
     //   height: 2
     // }
+  },
+  estiloView: {
+    backgroundColor: '#7cb0f6',
+    height: 300,
+    alignItems: 'flex-end',
+    justifyContent: 'center'
   }
 };
 
 const App = () => {
+
+  const { estiloTexto, estiloView } = Estilos;
+
   return(
-    <Text style={ Estilos.estiloTexto }>Frases do Dia</Text>
+    <View style={ estiloView }>
+      <Text style={ estiloTexto }>Frases do Dia</Text>
+    </View>
   );
 };
 
