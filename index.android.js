@@ -6,34 +6,36 @@ import {
 } from 'react-native';
 
 const Estilos = {
-  estiloTexto: {
+  container: {
+    flex: 1,
+    backgroundColor: '#7cb0f6',
+  },
+  header: {
+    flex: 2,
     fontSize: 40,
     backgroundColor: '#2932a1',
-    //COM CSS PADRAO
-    // fontStyle: 'italic'
-    // shadowColor: '#5e7766',
-    // shadowOpacity: 1,
-    // shadowRadius: 1,
-    // shadowOffset: {
-    //   width: 0,
-    //   height: 2
-    // }
   },
-  estiloView: {
-    backgroundColor: '#7cb0f6',
-    height: 300,
-    alignItems: 'flex-end',
-    justifyContent: 'center'
+  body: {
+    flex: 8,
+    fontSize: 40,
+    backgroundColor: '#424899',
+  },
+  footer: {
+    flex: 1,
+    fontSize: 40,
+    backgroundColor: '#a6a9d9',
   }
 };
 
 const App = () => {
 
-  const { estiloTexto, estiloView } = Estilos;
+  const { header, body, footer, container } = Estilos;
 
   return(
-    <View style={ estiloView }>
-      <Text style={ estiloTexto }>Frases do Dia</Text>
+    <View style={ container }>
+      <Text style={ header }>Header</Text>
+      <Text style={ body }>Body</Text>
+      <Text style={ footer }>Footer</Text>
     </View>
   );
 };
