@@ -1,8 +1,8 @@
 import React from 'react';
 import {
   View,
+  Image,
   Text,
-  TouchableOpacity,
   AppRegistry
 } from 'react-native';
 
@@ -10,41 +10,22 @@ const Estilos = {
   principal: {
     paddingTop: 40
   },
-  botao: {
-    backgroundColor: '#50ecb5',
-    padding: 10,
-    borderColor: '#326c5a',
-    borderWidth: 1,
-    borderRadius: 3,
-    shadowColor: '#000',
-    shadowOffset: {
-      width: 0,
-      height: 2
-    },
-    shadowOpacity: 1
-  },
-  textoBotao: {
-    fontSize: 30,
-    color: '#000',
-    alignSelf: 'center'
+  image: {
+    justifyContent: 'center'
   }
 };
 
-const onButtonCLick = () => {
-  alert('Clicked');
-}
-
 const App = () => {
 
-  const { principal, botao, textoBotao } = Estilos;
+  const { principal, image } = Estilos;
 
   return(
     <View style={ principal }>
-
-      <TouchableOpacity style={ botao }>
-          <Text style={ textoBotao }>Click</Text>
-      </TouchableOpacity>
-
+      <Image style={ image }
+        source={ require('./imgs/uvas.png') }
+      >
+        <Text>Legenda foto</Text>
+      </Image>
     </View>
   );
 };
